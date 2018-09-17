@@ -1,4 +1,4 @@
-﻿//question 1
+﻿//question 1 CFG 1
 type TERMINAL = IF|THEN|ELSE|BEGIN|END|PRINT|SEMICOLON|ID|EOF
 type parse_tree = 
     |Null //if sub trees aren't filled
@@ -40,7 +40,7 @@ let test_program program =
       | [] -> failwith "Early termination or missing EOF"
       | x::xs ->  if x = EOF then accept() else error()
 
-//question 2
+//question 2 CFG 2
 type TERMINAL2 = ID|PLUS|MINUS|TIMES|DIVIDES|OPENPAREN|ENDPAREN
 
 let eat2 token = function
